@@ -1,28 +1,41 @@
 <div class="example-container">
   <mat-form-field>
-    <input matInput placeholder="Principal Amount" (change)="updatePrincipal($event)">
+    <input
+      matInput
+      placeholder="Principal Amount"
+      (change)="updatePrincipal($event)"
+    />
     <span matPrefix>$&nbsp;</span>
     <span matSuffix>.00</span>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Interest Rate" type="number" (change)="updateInterestRate($event)">
+    <input
+      matInput
+      placeholder="Interest Rate"
+      type="number"
+      (change)="updateInterestRate($event)"
+    />
     <span matSuffix>%</span>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="No. of years" type="number" (change)="updatePeriod($event)">
+    <input
+      matInput
+      placeholder="No. of years"
+      type="number"
+      (change)="updatePeriod($event)"
+    />
     <span matSuffix>years</span>
   </mat-form-field>
 </div>
 
-<button mat-raised-button (click)="calcuateInterest()" color="primary">Calculate</button>
- 
+<button mat-raised-button (click)="calcuateInterest()" color="primary">
+  Calculate
+</button>
+
 <div class="result">
-  <p>
-    Accrued Interest Amount: {{interestAmount}}
-  </p>
-  <p>
-    Total Amount: {{totalAmount}}
-  </p>
+  <p>Accrued Interest Amount: {{ interestAmount }}</p>
+  <p>Total Amount: {{ totalAmount }}</p>
+  <p>Compound Interest: {{ compoundinterest }}</p>
 </div>
